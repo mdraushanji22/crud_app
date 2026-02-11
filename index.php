@@ -49,7 +49,15 @@
         </tr>
     </tbody>
 </table>
-<form>
+<br>
+<br>
+<?php
+if (isset($_GET['message'])) {
+    echo "<h6>" . $_GET['message'] . "</h6>";
+}
+?>
+
+<form action="insert_data.php" method="post">
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -60,11 +68,11 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="f_name">First Name</label>
-                        <input type="text" f_name" class="form-control">
+                        <input type="text" name="f_name" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="l_name">Last Name</label>
-                        <input type="text" l_name" class="form-control">
+                        <input type="text" name="l_name" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
@@ -73,7 +81,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">ADD</button>
+                    <input type="submit" name="add_data" value="ADD" class="btn btn-success">
                 </div>
             </div>
         </div>
