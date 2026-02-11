@@ -34,19 +34,6 @@
             }
         }
         ?>
-
-        <tr>
-            <td>3</td>
-            <td>Vikesh</td>
-            <td>Kumar</td>
-            <td>25</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Nabeel</td>
-            <td>Khan</td>
-            <td>7</td>
-        </tr>
     </tbody>
 </table>
 <br>
@@ -56,13 +43,18 @@ if (isset($_GET['message'])) {
     echo "<h6>" . $_GET['message'] . "</h6>";
 }
 ?>
+<?php
+if (isset($_GET['insert_msg'])) {
+    echo "<h5>" . $_GET['insert_msg'] . "</h5>";
+}
+?>
 
 <form action="insert_data.php" method="post">
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">ADD STUDENT</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
