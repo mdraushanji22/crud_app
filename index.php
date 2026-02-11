@@ -49,27 +49,35 @@
         </tr>
     </tbody>
 </table>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
+<form>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
                     <div class="form-group">
-                        <label for="fname">First Name</label>
-                        <input type="text">
+                        <label for="f_name">First Name</label>
+                        <input type="text" f_name" class="form-control">
                     </div>
-
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="form-group">
+                        <label for="l_name">Last Name</label>
+                        <input type="text" l_name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="text" name="age" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">ADD</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</form>
+
 <?php include('footer.php') ?>
