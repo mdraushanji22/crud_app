@@ -16,6 +16,27 @@ if (isset($_GET['id'])) {
 }
 
 ?>
+<?php
+if (isset($_POST['update_data'])) {
+
+    $fname = $_POST['f_name'];
+    $lname = $_POST['l_name'];
+    $age   = $_POST['age'];
+
+    $query = "update `students` set 
+    `first_name`='$fname',`last_name`='$lname',`age`='$age' where `id`=$id";
+
+    $result = mysqli_query($dbconnection, $query);
+
+    if (!$result) {
+        die("Update failed" . mysqli_error($dbconnection));
+    } else {
+        header('location:index.php?update_msg=You have updated succussfully data');
+    }
+}
+
+?>
+
 <form>
     <div class="form-group">
         <label for="f_name">First Name</label>
