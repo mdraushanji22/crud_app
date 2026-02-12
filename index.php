@@ -33,7 +33,9 @@
                     <td><?php echo $row['last_name'] ?></td>
                     <td><?php echo $row['age'] ?></td>
                     <td><a href="update.php?id=<?php echo $row['id'] ?>" class="btn btn-success">Update</a></td>
-                    <td><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Delete</a></td>
+                    <td><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Are you sure you want to delete this record?');">
+                            Delete</a></td>
 
                 </tr>
         <?php
@@ -51,9 +53,20 @@ if (isset($_GET['message'])) {
 ?>
 <?php
 if (isset($_GET['insert_msg'])) {
-    echo "<h5>" . $_GET['insert_msg'] . "</h5>";
+    echo "<h5 class='h-green'>" . $_GET['insert_msg'] . "</h5>";
 }
 ?>
+<?php
+if (isset($_GET['update_msg'])) {
+    echo "<h5 class='h-green1'>" . $_GET['update_msg'] . "</h5>";
+}
+?>
+<?php
+if (isset($_GET['delete_msg'])) {
+    echo "<h5 class='h-red'>" . $_GET['delete_msg'] . "</h5>";
+}
+?>
+
 
 <form action="insert_data.php" method="post">
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
