@@ -133,3 +133,5 @@ This is a basic educational project. For production use, implement:
 - Input sanitization and validation
 - Password protection for database credentials
 - Session management for authentication
+
+All Data Store in MySQL databases 
