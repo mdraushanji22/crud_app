@@ -104,6 +104,7 @@ CREATE TABLE students (
 - **Bootstrap 5** - Frontend framework
 - **HTML/CSS** - Markup and styling
 - **JavaScript** - Confirmation dialogs
+- And ligic build 
 
 ---
 
